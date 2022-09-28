@@ -20,20 +20,6 @@ const printUser = (user: User) => {
     console.log(`User: { id: ${user.id}, firstName: ${user.firstName}, lastName: ${user.lastName} }`);
 }
 
-class UserService {
-    public createUser = async (user: User): Promise<User> => {
-        return User.create({ firstName: "Abigail", lastName: "Colby" });
-    }
-
-    public getAllUsers = async (): Promise<User[]> => {
-        return User.findAll();
-    }
-
-    public getUserById = async (id: number): Promise<User | null> => {
-        return User.findByPk(id);
-    }
-}
-
 const main = async () => {
     console.log('application started');
 
