@@ -44,9 +44,9 @@ const main = async () => {
         console.error('Unable to connect to the database:', error);
     }
 
-    // printUsers(await User.findAll());
+    printUsers(await User.findAll());
 
-    // await User.create({ firstName: "Abigail", lastName: "Colby" });
+    await User.create({ firstName: "Michael", lastName: "Colby" });
 
     const user = await User.findByPk(1);
     if (user) printUser(user);
